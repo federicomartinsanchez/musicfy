@@ -93,7 +93,7 @@ function loginUser(req, res) {
               })
             }
           } else {
-            res(404).send({
+            res.status(404).send({
               message: "El usuario no ha podido loguearse"
             })
           }
