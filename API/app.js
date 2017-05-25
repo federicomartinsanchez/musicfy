@@ -24,6 +24,9 @@ app.use(bodyParser.json());
 
 
 //rutas base
+app.get('/api/',function(req,res){
+  res.status(200).send({message:"API is running!"})
+});
 app.use('/api',user_routes);
 app.use('/api',artist_routes);
 app.use('/api',album_routes);
